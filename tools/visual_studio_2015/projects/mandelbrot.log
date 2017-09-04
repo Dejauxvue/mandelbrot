@@ -1,3 +1,2 @@
 ﻿  main.cpp
-  mandelbrot.vcxproj -> D:\Dokumente\Programmieren\mandelbrot\tools\visual_studio_2015\projects\..\..\..\build\x64_Debug\mandelbrot.exe
-  mandelbrot.vcxproj -> D:\Dokumente\Programmieren\mandelbrot\tools\visual_studio_2015\projects\..\..\..\build\x64_Debug\mandelbrot.pdb (Full PDB)
+LINK : fatal error LNK1104: cannot open file 'expat.lib'
