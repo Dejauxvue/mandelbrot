@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>$(ProjectDir)..\..\..\..\..\Hiwi\werner\viral\source\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\..\..\..\..\Hiwi\werner\viral\build\$(Platform)_$(Configuration)\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>Mf.lib;Mfreadwrite.lib;Mfplat.lib;Mfuuid.lib;Shlwapi.lib;viral_core.lib;viral_gui.lib;expat.lib;glfw.lib;libjpeg.lib;libpng.lib;zlib.lib;winmm.lib;opengl32.lib;xinput9_1_0.lib;xaudio2.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
