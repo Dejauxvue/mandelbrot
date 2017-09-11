@@ -12,6 +12,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\mandelbrot\main.cpp" />
+    <ClCompile Include="..\..\..\source\mandelbrot\mandelbrot_generator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\mandelbrot\mandelbrot_generator.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{02FEFEDF-062A-42CD-B341-D9CEE93F6119}</ProjectGuid>
