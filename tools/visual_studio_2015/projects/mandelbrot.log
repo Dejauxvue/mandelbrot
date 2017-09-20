@@ -1,25 +1,12 @@
-﻿  main.cpp
-  mandelbrot_generator.cpp
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(62): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(76): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(77): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(78): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(81): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(82): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(83): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(86): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(87): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(88): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(92): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(93): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(94): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(97): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(98): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(99): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(103): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(104): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(105): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
+﻿  mandelbrot_gui.cpp
   Generating code
   Finished generating code
   mandelbrot.vcxproj -> E:\Dokumente\Programmieren\mandelbrot\tools\visual_studio_2015\projects\..\..\..\build\x64_Release\mandelbrot.exe
   mandelbrot.vcxproj -> E:\Dokumente\Programmieren\mandelbrot\tools\visual_studio_2015\projects\..\..\..\build\x64_Release\mandelbrot.pdb (Full PDB)
+  Copying new and modified assets to build directories for: mandelbrot
+EXEC : warning : Target: ""..\..\build\x64_Debug\mandelbrot"" contains extra files.
+      Check log for details: ""..\..\build\temp\x64_Debug\mandelbrot"\asset_copy_log.txt"
+      Purge before distribution.
+EXEC : warning : Target: ""..\..\build\x64_Release\mandelbrot"" contains extra files.
+      Check log for details: ""..\..\build\temp\x64_Release\mandelbrot"\asset_copy_log.txt"
+      Purge before distribution.

@@ -1,0 +1,21 @@
+#version 330
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Shader for textured, but unlit objects.
+//
+//////////////////////////////////////////////////////////////////////////
+
+uniform sampler2D texture_map;
+
+uniform vec4 material_diffuse_color;
+
+in vec2 frag_texcoords;
+
+out vec4 pixel_color;
+
+void main()
+{
+	pixel_color = vec4(texture(texture_map, frag_texcoords).rgb *
+			 material_diffuse_color.rgb, 1);
+}

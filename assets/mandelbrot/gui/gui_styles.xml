@@ -1,0 +1,886 @@
+<gui_styles>
+
+	<!-- *****************************************************************
+	* Cursors
+	****************************************************************** -->
+
+	<cursor_pointer type="cursor_style" material="cursor_pointer">
+		<extents><pos x="0" y="0" /><size x="19" y="19" /></extents>
+	</cursor_pointer>
+	<cursor_cross type="cursor_style" material="cursor_cross">
+		<extents><pos x="-9" y="-9" /><size x="19" y="19" /></extents>
+	</cursor_cross>
+	<cursor_caret type="cursor_style" material="cursor_caret">
+		<extents><pos x="-4" y="-9" /><size x="19" y="19" /></extents>
+	</cursor_caret>
+
+	<cursor_lr type="cursor_style" material="cursor_lr">
+		<extents><pos x="-10" y="-10" /><size x="19" y="19" /></extents>
+	</cursor_lr>
+	<cursor_ud type="cursor_style" material="cursor_ud">
+		<extents><pos x="-10" y="-10" /><size x="19" y="19" /></extents>
+	</cursor_ud>
+	<cursor_ul_lr type="cursor_style" material="cursor_ul_lr">
+		<extents><pos x="-10" y="-10" /><size x="19" y="19" /></extents>
+	</cursor_ul_lr>
+	<cursor_ll_ur type="cursor_style" material="cursor_ll_ur">
+		<extents><pos x="-10" y="-10" /><size x="19" y="19" /></extents>
+	</cursor_ll_ur>
+
+
+
+
+	<!-- *****************************************************************
+	* Fonts
+	****************************************************************** -->
+
+	<default_font type="font_style" material="deja_vu_small_black"
+				f="gui/deja_vu_small.bmfont"/>
+	<large_font type="font_style" material="deja_vu_large_black"
+				f="gui/deja_vu_large.bmfont"/>
+	<white_font type="font_style" material="deja_vu_small_white"
+				f="gui/deja_vu_small.bmfont"/>
+	<caption_font type="font_style" material="deja_vu_large_white"
+				f="gui/deja_vu_large.bmfont"/>
+	<mono_font type="font_style" material="deja_vu_mono_black"
+				f="gui/deja_vu_mono.bmfont"/>
+
+
+
+
+	<!-- *****************************************************************
+	* Spacers and anchors
+	****************************************************************** -->
+
+	<small_square_spacer type="spacer_style">
+		<extents x="16" y="16" />
+	</small_square_spacer>
+
+	<medium_spacer type="spacer_style">
+		<extents x="30" y="50" />
+	</medium_spacer>
+
+	<anchor_neg_neg type="anchor_style"
+		horizontal_anchor_underflow="anchor_neg"
+		vertical_anchor_underflow="anchor_neg"
+		horizontal_anchor_overflow="anchor_neg"
+		vertical_anchor_overflow="anchor_neg" />
+
+	<anchor_center_center type="anchor_style"
+		horizontal_anchor_underflow="anchor_center"
+		vertical_anchor_underflow="anchor_center"
+		horizontal_anchor_overflow="anchor_neg"
+		vertical_anchor_overflow="anchor_center" />		
+
+	<anchor_neg_center type="anchor_style"
+		horizontal_anchor_underflow="anchor_neg"
+		vertical_anchor_underflow="anchor_center"
+		horizontal_anchor_overflow="anchor_neg"
+		vertical_anchor_overflow="anchor_center" />		
+
+	<anchor_pos_pos type="anchor_style"
+		horizontal_anchor_underflow="anchor_pos"
+		vertical_anchor_underflow="anchor_pos"
+		horizontal_anchor_overflow="anchor_pos"
+		vertical_anchor_overflow="anchor_pos" />
+
+
+
+
+	<!-- *****************************************************************
+	* Labels and images
+	****************************************************************** -->
+
+	<generic_label type="label_style"
+		font_style="default_font" anchor_style="anchor_center_center" />
+	<generic_label_leftalign type="label_style"
+		inherit="generic_label" anchor_style="anchor_neg_center" />
+
+	<button_label type="label_style"
+		font_style="default_font" anchor_style="anchor_neg_center" />
+	<caption_label type="label_style"
+		font_style="caption_font" anchor_style="anchor_neg_center" />
+
+	<mono_label type="label_style"
+		font_style="mono_font" anchor_style="anchor_center_center" />
+	<white_label type="label_style"
+		font_style="white_font" anchor_style="anchor_center_center" />
+
+	<default_image type="image_style"
+		pixel_scale="1"
+		downscale="false"
+		upscale="false"
+		aspect="no_aspect"
+		allow_compression="false">
+		<base_size x="1" y="1" />
+	</default_image>
+
+	<button_image type="image_style"
+		inherit="default_image" />
+	<icon_image type="image_style"
+		inherit="default_image" />
+
+	<scaling_image type="image_style"
+		inherit="default_image"
+		downscale="true"
+		upscale="true" />
+
+
+
+
+	<!-- *****************************************************************
+	* Generic frames
+	****************************************************************** -->
+
+	<default_frame type="frame_style"
+		material="gui_frames">
+		<margin_00 x="0" y="0" />
+		<margin_22 x="0" y="0" />
+		<border_00 x="5" y="5" />
+		<border_22 x="5" y="5" />
+		<padding_00 x="-2" y="-2" />
+		<padding_22 x="-2" y="-2" />
+		<material_pixel_size x="1024" y="1024" />
+		<pixel_offset x="0" y="256" />
+		<pixel_size_00 x="5" y="5" />
+		<pixel_size_11 x="118" y="118" />
+		<pixel_size_22 x="5" y="5" />
+		<size_per_tile x="118" y="118" />
+	</default_frame>
+
+
+	<small_frame_def type="frame_style"
+		material="gui_frames">
+		<margin_00 x="0" y="0" />
+		<margin_22 x="0" y="0" />
+		<border_00 x="2" y="2" />
+		<border_22 x="2" y="2" />
+		<padding_00 x="0" y="0" />
+		<padding_22 x="0" y="0" />
+		<material_pixel_size x="1024" y="1024" />
+		<pixel_offset x="0" y="512" />
+		<pixel_size_00 x="2" y="2" />
+		<pixel_size_11 x="124" y="124" />
+		<pixel_size_22 x="2" y="2" />
+		<size_per_tile x="124" y="124" />
+	</small_frame_def>
+	<small_frame_dwn type="frame_style"
+		inherit="small_frame_def">
+		<pixel_offset x="256" y="512" />
+	</small_frame_dwn>
+	<small_frame_ro type="frame_style"
+		inherit="small_frame_def">
+		<pixel_offset x="128" y="512" />
+	</small_frame_ro>
+	<small_frame_kf_overlay type="frame_style"
+		inherit="small_frame_def">
+		<pixel_offset x="384" y="512" />
+	</small_frame_kf_overlay>
+	<small_frame_mf_overlay type="frame_style"
+		inherit="small_frame_def">
+		<pixel_offset x="512" y="512" />
+	</small_frame_mf_overlay>
+	<small_frame_dark_overlay type="frame_style"
+		inherit="small_frame_def">
+		<pixel_offset x="640" y="512" />
+	</small_frame_dark_overlay>
+
+
+	<textured_frame type="frame_style"
+		material="gui_frames">
+		<margin_00 x="4" y="4" />
+		<margin_22 x="4" y="4" />
+		<border_00 x="8" y="8" />
+		<border_22 x="8" y="8" />
+		<padding_00 x="4" y="4" />
+		<padding_22 x="4" y="4" />		
+		<material_pixel_size x="1024" y="1024" />
+		<pixel_offset x="0" y="768" />
+		<pixel_size_00 x="8" y="8" />
+		<pixel_size_11 x="112" y="112" />
+		<pixel_size_22 x="8" y="8" />
+		<size_per_tile x="112" y="112" />
+	</textured_frame>
+
+
+
+
+	<!-- *****************************************************************
+	* Rectangular buttons
+	****************************************************************** -->
+
+	<ctrl_def_frame type="frame_style"
+		material="gui_frames">
+		<margin_00 x="2" y="2" />
+		<margin_22 x="2" y="2" />
+		<border_00 x="5" y="5" />
+		<border_22 x="5" y="5" />
+		<padding_00 x="-1" y="-1" />
+		<padding_22 x="-1" y="-1" />
+		<material_pixel_size x="1024" y="1024" />
+		<pixel_offset x="0" y="0" />
+		<pixel_size_00 x="5" y="5" />
+		<pixel_size_11 x="118" y="118" />
+		<pixel_size_22 x="5" y="5" />
+		<size_per_tile x="118" y="118" />
+	</ctrl_def_frame>
+	<ctrl_dwn_frame type="frame_style"
+		inherit="ctrl_def_frame">
+		<pixel_offset x="256" y="0" />
+	</ctrl_dwn_frame>
+	<ctrl_ro_frame type="frame_style"
+		inherit="ctrl_def_frame">
+		<pixel_offset x="128" y="0" />
+	</ctrl_ro_frame>
+	<ctrl_kf_overlay type="frame_style"
+		inherit="ctrl_def_frame">
+		<pixel_offset x="384" y="0" />
+	</ctrl_kf_overlay>
+	<ctrl_mf_overlay type="frame_style"
+		inherit="ctrl_def_frame">
+		<pixel_offset x="512" y="0" />
+	</ctrl_mf_overlay>
+
+	<ctrl_button type="button_style"
+		default_style="ctrl_def_frame"
+		down_style="ctrl_dwn_frame"
+		read_only_style="ctrl_ro_frame"
+		key_focus_overlay_style="ctrl_kf_overlay"
+		mouse_focus_overlay_style="ctrl_mf_overlay"
+		content_anchor_style="anchor_center_center"
+		label_style="button_label"
+		image_style="button_image"
+		image_label_spacing="4"
+		hold_delay_seconds="0.5"
+		allow_repeat="false"
+		repeat_seconds="0.3" />
+
+
+
+
+	<!-- *****************************************************************
+	* Small buttons
+	****************************************************************** -->
+
+	<small_button type="button_style"
+		inherit="ctrl_button"
+		default_style="small_frame_def"
+		down_style="small_frame_dwn"
+		read_only_style="small_frame_ro"
+		key_focus_overlay_style="small_frame_kf_overlay"
+		mouse_focus_overlay_style="small_frame_mf_overlay" />
+
+	<small_button_list type="button_style"
+		inherit="small_button"
+		allow_repeat="true" />
+
+
+
+
+	<!-- *****************************************************************
+	* Checkbox buttons
+	****************************************************************** -->
+
+	<ctrl_check_frame type="frame_style"
+		inherit="ctrl_def_frame">
+		<padding_00 x="-4" y="-4" />
+		<padding_22 x="-4" y="-4" />
+	</ctrl_check_frame>
+
+	<ctrl_check_button type="button_style"
+		inherit="ctrl_button"
+		default_style="ctrl_check_frame"
+		down_style="ctrl_dwn_frame"
+		read_only_style="ctrl_ro_frame"
+		key_focus_overlay_style="ctrl_kf_overlay"
+		mouse_focus_overlay_style="ctrl_mf_overlay" />
+
+	<check_tristate type="tristate_style"
+		button_style="ctrl_check_button"
+		yes_icon="check_yes" no_icon="check_no" maybe_icon="check_maybe"
+		button_label_spacing="4" >
+			<icon_pixel_size x="14" y="14"/>
+	</check_tristate>
+
+
+
+
+	<!-- *****************************************************************
+	* Round buttons
+	****************************************************************** -->
+
+	<crnd_def_frame type="frame_style"
+		material="gui_frames">
+		<margin_00 x="2" y="2" />
+		<margin_22 x="2" y="2" />
+		<border_00 x="8" y="8" />
+		<border_22 x="8" y="8" />
+		<padding_00 x="-4" y="-4" />
+		<padding_22 x="-4" y="-4" />
+		<material_pixel_size x="1024" y="1024" />
+		<pixel_offset x="0" y="128" />
+		<pixel_size_00 x="8" y="8" />
+		<pixel_size_11 x="112" y="112" />
+		<pixel_size_22 x="8" y="8" />
+		<size_per_tile x="112" y="112" />
+	</crnd_def_frame>
+	<crnd_dwn_frame type="frame_style"
+		inherit="crnd_def_frame">
+		<pixel_offset x="256" y="128" />
+	</crnd_dwn_frame>
+	<crnd_ro_frame type="frame_style"
+		inherit="crnd_def_frame">
+		<pixel_offset x="128" y="128" />
+	</crnd_ro_frame>
+	<crnd_kf_overlay type="frame_style"
+		inherit="crnd_def_frame">
+		<pixel_offset x="384" y="128" />
+	</crnd_kf_overlay>
+	<crnd_mf_overlay type="frame_style"
+		inherit="crnd_def_frame">
+		<pixel_offset x="512" y="128" />
+	</crnd_mf_overlay>
+
+	<crnd_button type="button_style"
+		inherit="ctrl_button"
+		default_style="crnd_def_frame"
+		down_style="crnd_dwn_frame"
+		read_only_style="crnd_ro_frame"
+		key_focus_overlay_style="crnd_kf_overlay"
+		mouse_focus_overlay_style="crnd_mf_overlay" />
+
+
+
+
+	<!-- *****************************************************************
+	* Choicebox buttons
+	****************************************************************** -->
+
+	<crnd_choice_frame type="frame_style"
+		inherit="crnd_def_frame">		
+		<padding_00 x="-4" y="-4" />
+		<padding_22 x="-4" y="-4" />
+	</crnd_choice_frame>
+
+	<crnd_choice_button type="button_style"
+		inherit="ctrl_button"
+		default_style="crnd_choice_frame"
+		down_style="crnd_dwn_frame"
+		read_only_style="crnd_ro_frame"
+		key_focus_overlay_style="crnd_kf_overlay"
+		mouse_focus_overlay_style="crnd_mf_overlay" />
+
+	<choice_tristate type="tristate_style"
+		button_style="crnd_choice_button"
+		yes_icon="choice_yes" no_icon="choice_no" maybe_icon="choice_maybe"
+		button_label_spacing="4" >
+			<icon_pixel_size x="8" y="8"/>
+	</choice_tristate>
+
+
+
+
+	<!-- *****************************************************************
+	* Split pane
+	****************************************************************** -->
+
+	<split_button type="button_style"
+		inherit="ctrl_button"
+		default_style="small_frame_def"
+		down_style="small_frame_dwn"
+		read_only_style="small_frame_ro"
+		key_focus_overlay_style="small_frame_kf_overlay"
+		mouse_focus_overlay_style="small_frame_mf_overlay" />
+
+	<split_knob type="knob_style"
+		button_style="split_button"
+		min_drag_range="0"
+		drag_tolerance="100" />
+
+	<split type="split_style"
+		knob_style="split_knob"
+		splitter_size="6"
+		min_pane_size="32"
+		ensure_content_size_neg="true"
+		ensure_content_size_pos="true" />
+
+	<split_no_ensure type="split_style"
+		knob_style="split_knob"
+		splitter_size="6"
+		min_pane_size="32"
+		ensure_content_size_neg="false"
+		ensure_content_size_pos="false" />
+
+
+
+
+	<!-- *****************************************************************
+	* Scrolling
+	****************************************************************** -->
+
+	<round_knob type="knob_style"
+		button_style="crnd_button"
+		min_drag_range="0"
+		drag_tolerance="45" />
+
+	<scrollbar_knob type="knob_style"
+		button_style="ctrl_button"
+		min_drag_range="0"
+		drag_tolerance="45" />
+
+	<scrollbar type="scrollbar_style"
+		knob_style="scrollbar_knob"
+		button_style="ctrl_button"
+		band_style="ctrl_dwn_frame"
+		buttons_only="false"
+		button_size="20"
+		min_band_size="24"
+		left_icon="scroll_left"
+		up_icon="scroll_up"
+		right_icon="scroll_right"
+		down_icon="scroll_down">
+			<icon_pixel_size x="8" y="8"/>
+	</scrollbar>
+
+	<scrollbar_compact type="scrollbar_style"
+		inherit="scrollbar"
+		buttons_only="true" />
+
+	<scroll_area type="scroll_area_style"
+		scrollbar_style="scrollbar"
+		prefer_override_size="false"
+		scrollbar_show_horizontal="show_if_required"
+		scrollbar_show_vertical="show_if_required"
+		scrollbar_arrange="arrange_default">
+			<override_size x="32" y="32" />
+	</scroll_area>
+
+	<scroll_area_bars_ifreq type="scroll_area_style"
+		inherit="scroll_area" />				
+
+	<scroll_area_list type="scroll_area_style"
+		scrollbar_style="scrollbar"
+		prefer_override_size="true"
+		scrollbar_show_horizontal="show_always"
+		scrollbar_show_vertical="show_always"
+		scrollbar_arrange="arrange_default">
+			<override_size x="450" y="230" />
+	</scroll_area_list>
+
+
+
+
+	<!-- *****************************************************************
+	* List, listbox, dropdown and tabview.
+	****************************************************************** -->
+
+	<list type="list_style"
+		button_style="small_button_list"
+		allow_grow="true"
+		allow_stack="true"
+		allow_stretch="false">
+			<min_item_size x="24" y="24"/>
+			<icon_pixel_size x="16" y="16"/>
+	</list>
+
+	<list_nogrow type="list_style"
+		button_style="small_button_list"
+		allow_grow="false"
+		allow_stack="true"
+		allow_stretch="false">
+			<min_item_size x="48" y="24"/>
+			<icon_pixel_size x="16" y="16"/>
+	</list_nogrow>
+
+	<listbox_scroll type="scroll_area_style"
+		scrollbar_style="scrollbar"
+		prefer_override_size="true"
+		scrollbar_show_horizontal="show_if_required"
+		scrollbar_show_vertical="show_if_required"
+		scrollbar_arrange="arrange_default">
+			<override_size x="32" y="32" />
+	</listbox_scroll>
+
+	<listbox type="listbox_style"
+		frame_style="crnd_dwn_frame"
+		scroll_area_style="listbox_scroll"
+		list_style="list" />		
+
+	<listbox_nogrow type="listbox_style"
+		frame_style="crnd_dwn_frame"
+		scroll_area_style="listbox_scroll"
+		list_style="list_nogrow" />
+
+
+	<list_button_leftalign type="button_style"
+		inherit="small_button_list"
+		content_anchor_style="anchor_neg_center" />
+
+	<list_leftalign type="list_style"
+		inherit="list" 
+		button_style="list_button_leftalign">
+			<icon_pixel_size x="19" y="19" />
+	</list_leftalign>
+
+	<listbox_leftalign type="listbox_style"
+		inherit="listbox"
+		list_style="list_leftalign" />
+
+
+	<dropdown_list_button type="button_style"
+		inherit="small_button_list"
+		content_anchor_style="anchor_neg_center" />
+
+	<dropdown_list type="list_style"
+		button_style="dropdown_list_button"
+		allow_grow="true"
+		allow_stack="false"
+		allow_stretch="true">
+			<min_item_size x="24" y="24"/>
+			<icon_pixel_size x="16" y="16"/>
+	</dropdown_list>
+
+	<dropdown_scroll type="scroll_area_style"
+		scrollbar_style="scrollbar"
+		prefer_override_size="true"
+		scrollbar_show_horizontal="show_if_required"
+		scrollbar_show_vertical="show_if_required"
+		scrollbar_arrange="arrange_default">
+			<override_size x="160" y="160" />
+	</dropdown_scroll>
+
+	<dropdown_listbox type="listbox_style"
+		frame_style="ctrl_ro_frame"
+		scroll_area_style="dropdown_scroll"
+		list_style="dropdown_list" />		
+
+	<dropdown type="dropdown_style"
+		label_style="generic_label"
+		button_style="ctrl_button"
+		listbox_style="dropdown_listbox"
+		dropdown_icon="dropdown"
+		background_style="small_frame_dark_overlay">
+			<min_item_button_size x="128" y="20" />
+			<icon_pixel_size x="8" y="8"/>
+	</dropdown>
+
+
+	<tabview_list type="list_style"
+		button_style="small_button_list"
+		allow_grow="true"
+		allow_stack="true"
+		allow_stretch="true">
+			<min_item_size x="24" y="24"/>
+			<icon_pixel_size x="16" y="16"/>
+	</tabview_list>
+
+	<tabview_content_scroll type="scroll_area_style"
+		scrollbar_style="scrollbar"
+		prefer_override_size="true"
+		scrollbar_show_horizontal="show_if_required"
+		scrollbar_show_vertical="show_if_required"
+		scrollbar_arrange="arrange_default">
+			<override_size x="64" y="64" />
+	</tabview_content_scroll>
+
+	<tabview_header_horizontal_scroll type="scroll_area_style"
+		scrollbar_style="scrollbar_compact"
+		prefer_override_size="true"
+		scrollbar_show_horizontal="show_always"
+		scrollbar_show_vertical="show_never"
+		scrollbar_arrange="arrange_compact">
+			<override_size x="64" y="32" />
+	</tabview_header_horizontal_scroll>
+
+	<tabview_horizontal type="tabview_style"
+		split_style="split"
+		header_scroll_area_style="tabview_header_horizontal_scroll"
+		header_list_style="tabview_list" />
+
+	<tabview_header_vertical_scroll type="scroll_area_style"
+		scrollbar_style="scrollbar_compact"
+		prefer_override_size="true"
+		scrollbar_show_horizontal="show_never"
+		scrollbar_show_vertical="show_always"
+		scrollbar_arrange="arrange_compact">
+			<override_size x="64" y="32" />
+	</tabview_header_vertical_scroll>
+
+	<tabview_vertical type="tabview_style"
+		split_style="split"
+		header_scroll_area_style="tabview_header_vertical_scroll"
+		header_list_style="tabview_list" />
+
+
+
+
+	<!-- *****************************************************************
+	* Edit and editbox
+	****************************************************************** -->
+
+	<edit_scroll_area_oneline type="scroll_area_style"
+		scrollbar_style="scrollbar_compact"
+		prefer_override_size="true"
+		scrollbar_show_horizontal="show_if_required"
+		scrollbar_show_vertical="show_never"
+		scrollbar_arrange="arrange_compact">
+			<override_size x="128" y="14" />
+	</edit_scroll_area_oneline>
+
+	<edit_scroll_area_multiline type="scroll_area_style"
+		scrollbar_style="scrollbar"
+		prefer_override_size="true"
+		scrollbar_show_horizontal="show_if_required"
+		scrollbar_show_vertical="show_always"
+		scrollbar_arrange="arrange_default">
+			<override_size x="64" y="64" />
+	</edit_scroll_area_multiline>
+
+	<edit_oneline type="edit_style"
+		font_style="large_font"
+		min_line_width="16"
+		selection_material="selection"
+		caret_material="caret"
+		caret_width="2"
+		caret_overwrite_width="6"
+		caret_blink_seconds="0.5"
+		caret_cursor="cursor_caret" />
+
+	<edit_multiline type="edit_style"
+		inherit="edit_oneline"
+		font_style="mono_font" />
+
+	<editbox_oneline type="editbox_style"
+		frame_style="small_frame_def"
+		scroll_area_style="edit_scroll_area_oneline"
+		edit_style="edit_oneline" />
+
+
+
+
+	<!-- *****************************************************************
+	* Value editing, progress bars, image maps
+	****************************************************************** -->
+
+	<slider type="slider_style"
+		knob_style="round_knob"
+		button_style="ctrl_button"
+		band_style="ctrl_dwn_frame"
+		show_buttons="true"
+		button_size="16"
+		button_spacing="2"
+		increment_icon="slider_increment"
+		decrement_icon="slider_decrement"
+		fixed_band_size="10"
+		min_band_size="64"
+		mark_icon="mark"
+		mark_icon_size="12"
+		mark_snap_tolerance="12">
+			<button_icon_pixel_size x="8" y="8" />
+	</slider>
+
+	<slider_no_buttons type="slider_style"
+		inherit="slider"
+		show_buttons="false" />
+
+	<edit_scroll_area_value_edit type="scroll_area_style"
+		scrollbar_style="scrollbar_compact"
+		prefer_override_size="true"
+		scrollbar_show_horizontal="show_if_required"
+		scrollbar_show_vertical="show_never"
+		scrollbar_arrange="arrange_compact" >
+		<override_size x="80" y="16" />
+	</edit_scroll_area_value_edit>
+
+	<editbox_value_edit type="editbox_style"
+		frame_style="ctrl_def_frame"
+		scroll_area_style="edit_scroll_area_value_edit"
+		edit_style="edit_oneline"
+		compact_scroll="true" />
+
+	<value_edit type="value_edit_style"
+		slider_style="slider"
+		editbox_style="editbox_value_edit"
+		slider_edit_spacing="4" />
+
+	<value_edit_no_buttons type="value_edit_style"
+		inherit="value_edit"
+		slider_style="slider_no_buttons" />
+
+	<progress_bar type="progress_bar_style"
+		background_style="crnd_def_frame"
+		fill_style="crnd_dwn_frame"
+		label_style="generic_label"
+		min_length="100" />
+
+	<default_image_map type="image_map_style"
+		image_style="default_image"
+		frame_style="default_frame" />
+
+
+
+
+	<!-- *****************************************************************
+	* Window caption buttons
+	****************************************************************** -->
+
+	<hdr_def_frame type="frame_style"
+		material="gui_frames">
+		<margin_00 x="0" y="0" />
+		<margin_22 x="0" y="0" />
+		<border_00 x="6" y="6" />
+		<border_22 x="6" y="6" />
+		<padding_00 x="-6" y="-6" />
+		<padding_22 x="-6" y="-6" />
+		<material_pixel_size x="1024" y="1024" />
+		<pixel_offset x="0" y="640" />
+		<pixel_size_00 x="6" y="6" />
+		<pixel_size_11 x="116" y="116" />
+		<pixel_size_22 x="6" y="6" />
+		<size_per_tile x="116" y="116" />
+	</hdr_def_frame>
+	<hdr_dwn_frame type="frame_style"
+		inherit="hdr_def_frame">
+		<pixel_offset x="256" y="640" />
+	</hdr_dwn_frame>
+	<hdr_ro_frame type="frame_style"
+		inherit="hdr_def_frame">
+		<pixel_offset x="128" y="640" />
+	</hdr_ro_frame>
+	<hdr_kf_overlay type="frame_style"
+		inherit="hdr_def_frame">
+		<pixel_offset x="384" y="640" />
+	</hdr_kf_overlay>
+	<hdr_mf_overlay type="frame_style"
+		inherit="hdr_def_frame">
+		<pixel_offset x="512" y="640" />
+	</hdr_mf_overlay>
+
+	<hdr_button type="button_style"
+		inherit="ctrl_button"
+		default_style="hdr_def_frame"
+		down_style="hdr_dwn_frame"
+		read_only_style="hdr_ro_frame"
+		key_focus_overlay_style="hdr_kf_overlay"
+		mouse_focus_overlay_style="hdr_mf_overlay" />
+
+
+
+
+	<!-- *****************************************************************
+	* Windows
+	****************************************************************** -->
+
+	<win_def_frame type="frame_style"
+		material="gui_frames">
+		<margin_00 x="2" y="2" />
+		<margin_22 x="2" y="2" />
+		<border_00 x="15" y="25" />
+		<border_22 x="13" y="11" />
+		<padding_00 x="-10" y="0" />
+		<padding_22 x="-2" y="0" />
+		<material_pixel_size x="1024" y="1024" />
+		<pixel_offset x="0" y="384" />
+		<pixel_size_00 x="15" y="25" />
+		<pixel_size_11 x="100" y="92" />
+		<pixel_size_22 x="13" y="11" />
+		<size_per_tile x="100" y="92" />
+	</win_def_frame>
+	<win_kf_overlay type="frame_style"
+		inherit="win_def_frame">
+		<pixel_offset x="128" y="384" />
+	</win_kf_overlay>
+
+
+	<window type="window_style"
+		default_style="win_def_frame"
+		key_focus_overlay_style="win_kf_overlay"
+		
+		caption_height="22"
+		caption_right_spacing="14"
+		caption_button_spacing="4"
+
+		caption_label_style="caption_label"
+
+		close_button_style="hdr_button"
+		close_icon="hdr_close"
+
+		cursor_resize_lr="cursor_lr"
+		cursor_resize_ud="cursor_ud"
+		cursor_resize_ul_lr="cursor_ul_lr"
+		cursor_resize_ll_ur="cursor_ll_ur"
+
+		hot_area_move_height="24"
+		hot_area_resize_thickness="5">
+
+		<caption_offset x="9" y="2" />
+		<close_icon_pixel_size x="12" y="12" />
+
+		<hot_areas_padding_00 x="0" y="0" />
+		<hot_areas_padding_22 x="6" y="6" />
+
+		<min_visible_hot_area_move_00 x="12" y="12" />
+		<min_visible_hot_area_move_22 x="64" y="12" />
+		<min_client_size x="64" y="32" />
+		<max_client_size x="1024" y="1024" />
+	</window>
+
+
+
+
+	<!-- *****************************************************************
+	* Dialogs
+	****************************************************************** -->
+
+	<msgbox type="msgbox_style"
+		label_style="generic_label"
+		button_style="ctrl_button"
+		window_style="window"
+		icon_image_style="icon_image"
+		icon_question="msgbox_question"
+		icon_info="msgbox_info"
+		icon_warn="msgbox_warn"
+		icon_error="msgbox_error"
+		background_style="small_frame_dark_overlay">
+			<icon_pixel_size x="48" y="48" />
+	</msgbox>
+
+	<string_dialog type="string_dialog_style"
+		label_style="generic_label"
+		button_style="ctrl_button"
+		editbox_style="editbox_oneline"
+		window_style="window"
+		background_style="small_frame_dark_overlay">
+		<initial_client_size x="400" y="192" />
+	</string_dialog>
+		
+	<file_dialog type="file_dialog_style"
+		label_style="generic_label_leftalign"
+		button_style="ctrl_button"
+		listbox_style="listbox_leftalign"
+		dropdown_style="dropdown"
+		editbox_style="editbox_oneline"
+		window_style="window"
+		icon_folder="file_dialog_folder"
+		icon_file="file_dialog_file"
+		msgbox_style="msgbox"
+		background_style="small_frame_dark_overlay">
+		<initial_client_size x="512" y="256" />
+	</file_dialog>
+	
+	<color_dialog type="color_dialog_style"
+		spacer_style="small_square_spacer"
+		label_style="generic_label_leftalign"
+		button_style="ctrl_button"
+		value_edit_style="value_edit_no_buttons"
+		image_map_style="default_image_map"
+		window_style="window"
+		background_style="small_frame_dark_overlay"
+		image_shader="gui_shader">
+		<preview_pixel_size x="64" y="256" />
+		<preview_grid_pixel_size x="16" y="16" />
+		<color_picker_h_pixel_size x="32" y="256" />
+		<color_picker_sv_pixel_size x="256" y="256" />
+	</color_dialog>
+
+</gui_styles>

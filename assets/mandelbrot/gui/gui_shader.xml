@@ -1,0 +1,6 @@
+<data>
+	<gui_shader type="shader">
+		<vertex_shader condition="gl3" file="test_gui/gui_shader.glvs" />
+		<fragment_shader condition="gl3" file="test_gui/gui_shader.glfs" />
+	</gui_shader>
+</data>

@@ -21,9 +21,15 @@
     <ClCompile Include="..\..\..\source\mandelbrot\mandelbrot_generator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\mandelbrot\mandelbrot_gui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\mandelbrot\mandelbrot_generator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\mandelbrot\mandelbrot_gui.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

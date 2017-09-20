@@ -1,0 +1,17 @@
+#version 330
+
+uniform sampler2D texture_map;
+uniform vec4 material_diffuse_color;
+
+in vec2 frag_texcoords;
+
+out vec4 pixel_color;
+
+void main()
+{
+	vec4 texture_color =
+		texture(texture_map, frag_texcoords).rgba;
+	
+	pixel_color = 
+		vec4(texture_color.rgb * material_diffuse_color.rgb, texture_color.a);
+}

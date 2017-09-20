@@ -1,0 +1,1 @@
+@call mandelbrot_copy_assets.bat

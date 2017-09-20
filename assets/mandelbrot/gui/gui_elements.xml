@@ -1,0 +1,15 @@
+<gui_elements>		
+	<bg_label type="label"
+		label_style="generic_label"
+		text="placeholder for fancy shnizzle"/>
+	
+	<bg_frame type="frame"
+		frame_style="default_frame"
+		content="bg_label"/>
+	
+	
+
+	<window_area type="window_area"
+		background="bg_frame"/>
+  
+  </gui_elements>

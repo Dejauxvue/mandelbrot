@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libvorbis", "..\..\..\..\Hi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\..\..\..\Hiwi\werner\viral\tools\visual_studio_2015\external\zlib.vcxproj", "{57EFCBAC-C6DB-4A0A-911B-029DFD676B7B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "viral_test", "..\..\..\..\Hiwi\werner_svn\viral\tools\visual_studio_2015\projects\viral_test.vcxproj", "{94AAA072-EAC9-4034-824A-EA4100B4883A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -113,6 +115,14 @@ Global
 		{57EFCBAC-C6DB-4A0A-911B-029DFD676B7B}.Release|x64.Build.0 = Release|x64
 		{57EFCBAC-C6DB-4A0A-911B-029DFD676B7B}.Release|x86.ActiveCfg = Release|Win32
 		{57EFCBAC-C6DB-4A0A-911B-029DFD676B7B}.Release|x86.Build.0 = Release|Win32
+		{94AAA072-EAC9-4034-824A-EA4100B4883A}.Debug|x64.ActiveCfg = Debug|x64
+		{94AAA072-EAC9-4034-824A-EA4100B4883A}.Debug|x64.Build.0 = Debug|x64
+		{94AAA072-EAC9-4034-824A-EA4100B4883A}.Debug|x86.ActiveCfg = Debug|Win32
+		{94AAA072-EAC9-4034-824A-EA4100B4883A}.Debug|x86.Build.0 = Debug|Win32
+		{94AAA072-EAC9-4034-824A-EA4100B4883A}.Release|x64.ActiveCfg = Release|x64
+		{94AAA072-EAC9-4034-824A-EA4100B4883A}.Release|x64.Build.0 = Release|x64
+		{94AAA072-EAC9-4034-824A-EA4100B4883A}.Release|x86.ActiveCfg = Release|Win32
+		{94AAA072-EAC9-4034-824A-EA4100B4883A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,5 +138,6 @@ Global
 		{66B067F1-4EB8-44CE-BFA2-32D2B582A75F} = {4981A7D4-B9BE-49D3-AD0B-CF51522F6FDC}
 		{5028BB57-80B6-4ADB-BC16-D27F98ADD82E} = {4981A7D4-B9BE-49D3-AD0B-CF51522F6FDC}
 		{57EFCBAC-C6DB-4A0A-911B-029DFD676B7B} = {4981A7D4-B9BE-49D3-AD0B-CF51522F6FDC}
+		{94AAA072-EAC9-4034-824A-EA4100B4883A} = {4926880A-90D8-4037-9338-A1A4394C8643}
 	EndGlobalSection
 EndGlobal
