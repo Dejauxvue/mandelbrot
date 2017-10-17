@@ -1,4 +1,7 @@
-<gui_elements>		
+<gui_elements>	
+	<!-- *****************************************************************
+	* Display of mandelbrot
+	****************************************************************** -->	
 	<bg_label type="label"
 		label_style="generic_label"
 		text="placeholder for fancy shnizzle"/>
@@ -6,10 +9,102 @@
 	<bg_frame type="frame"
 		frame_style="default_frame"
 		content="bg_label"/>
+		
+	<!-- *****************************************************************
+	* Options regarding calculation
+	****************************************************************** -->
 	
+	<options_headline type="label"
+		label_style="generic_label"
+		text="Interpolation Settings:"/>
 	
+	<stepsize_label type="label"
+		label_style="generic_label"
+		text="Interpolation stepsize: "/>
+		
+	<stepsize_editbox type="editbox"
+		editbox_style = "editbox_oneline"
+		multiline = "false"
+		notify_accept = "false"
+		text="0.01"/>
+	
+	<interpolation_label type="label"
+		label_style="generic_label"
+		text="Interpolation:"/>
+		
+	<interpolation_slider type="value_edit"
+		value_edit_style="value_edit_no_buttons"
+		orientation="horizontal"
+		snap="snap_none" />
+		
+	<iteration_label type="label"
+		label_style="generic_label"
+		text="Iteration step: "/>
+		
+	<iteration_editbox type="editbox"
+		editbox_style = "editbox_oneline"
+		multiline = "false"
+		notify_accept = "false"
+		text="0"/>
+		
+	<method_label type="label"
+		label_style="generic_label"
+		text="Iteration Method: "/>
+		
+	<method_dropdown type="dropdown"		
+		dropdown_style="dropdown"
+		select_index="2">
+		<items>
+			<item text="Polynomial" />
+			<item text="linear angel abs" />
+			<item text="linear short angle abs" />
+			<item text="linear xy" />
+		</items>
+	</method_dropdown>
+	
+	<options_grid type="grid">
+		<size x="2" y="4"/>
+		<cells>
+			<cell x="0" y="0" content="stepsize_label"/>
+			<cell x="1" y="0" content="stepsize_editbox"/>
+			
+			<cell x="0" y="1" content="interpolation_label"/>
+			<cell x="1" y="1" content="interpolation_slider"/>
+			
+			<cell x="0" y="2" content="iteration_label"/>
+			<cell x="1" y="2" content="iteration_editbox"/>
+			
+			<cell x="0" y="3" content="method_label"/>
+			<cell x="1" y="3" content="method_dropdown"/>
+		</cells>
+	</options_grid>
+	
+	<start_pause_button type="button"
+		button_style="ctrl_button"
+		behaviour="click_button"
+		text="start" />
+	
+	<options type="grid">
+		<size x="1" y="3"/>
+		<cells>
+			<cell x="0" y="0" content="options_headline"/>
+			<cell x="0" y="1" content="options_grid"/>
+			<cell x="0" y="2" content="start_pause_button"/>
+		</cells>
+	</options>
+	
+	<options_frame type="frame"
+		frame_style="default_frame"
+		content="options"/>
+	
+	<main_split type="split"
+		split_style="split"
+		orientation="vertical"
+		neg_content="bg_frame"
+		pos_content="options_frame"
+		split_normalized="0.85"/>
 
 	<window_area type="window_area"
-		background="bg_frame"/>
+		background="main_split"/>
   
   </gui_elements>
