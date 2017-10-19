@@ -1,10 +1,4 @@
-﻿  main.cpp
-  mandelbrot_generator.cpp
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(228): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(229): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-..\..\..\source\mandelbrot\mandelbrot_generator.cpp(230): warning C4244: '=': conversion from 'float' to 'unsigned char', possible loss of data
-  mandelbrot_gui.cpp
-  Generating code
+﻿  Generating code
   Finished generating code
   mandelbrot.vcxproj -> E:\Dokumente\Programmieren\mandelbrot\tools\visual_studio_2015\projects\..\..\..\build\x64_Release\mandelbrot.exe
   mandelbrot.vcxproj -> E:\Dokumente\Programmieren\mandelbrot\tools\visual_studio_2015\projects\..\..\..\build\x64_Release\mandelbrot.pdb (Full PDB)
