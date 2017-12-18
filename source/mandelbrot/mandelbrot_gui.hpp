@@ -81,6 +81,7 @@ private:
 	/** callbacks for buttons etc.*/
 	//{
 	void start_pause_visualization(const viral_gui::gui_button_event& event);
+	void write_simulation_to_file(const viral_gui::gui_button_event& event);
 	//}
 
 	/**

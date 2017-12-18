@@ -23,6 +23,8 @@
 #include <viral_core/render_command.hpp>
 #include <viral_core/log.hpp>
 
+#include <opencv2/videoio.hpp>
+
 using namespace viral_gui;
 using namespace viral_core;
 
@@ -49,6 +51,7 @@ mandelbrot_gui::mandelbrot_gui()
 		set_content(image_viewport_);
 
 	register_event_callback("start_pause_button", *this, (&mandelbrot_gui::start_pause_visualization));
+	register_event_callback("record_button", *this, (&mandelbrot_gui::write_simulation_to_file));
 
 	parameters_.image_dimensions_ = vector2i(1920, 1080);
 	parameters_.interpolate_ = true;
@@ -97,7 +100,7 @@ void mandelbrot_gui::update_parameters_from_gui()
 		parameters_.interpolation_method_ = &mandelbrot_generator::linear_xy;
 		break;
 	default:
-		LOG_ERROR(string("Invalid index from method_dropdown: ") 
+		LOG_ERROR(string("Invalid index from method_dropdown: ")
 			+ string(element_cache_.entry<gui_dropdown>("method_dropdown")().selected_index()));
 		break;
 	}
@@ -108,8 +111,6 @@ void mandelbrot_gui::update_gui_from_parameters()
 	element_cache_.entry<gui_editbox>("iteration_editbox")().set_text(string(parameters_.iterations_));
 	element_cache_.entry<gui_value_edit>("interpolation_slider")().try_set_value(parameters_.interpolation_);
 }
-
-
 
 void mandelbrot_gui::logics_hook(viral_gui::gui_modal_interaction * modal_interaction)
 {
@@ -170,13 +171,46 @@ void mandelbrot_gui::start_pause_visualization(const gui_button_event & event)
 {
 	MUTEX_SCOPE(visualization_mutex_);
 	run_visualization_ = !run_visualization_;
-	if (run_visualization_) { 
-		element_cache_.entry<gui_button>("start_pause_button")().set_text("pause"); 
+	if (run_visualization_) {
+		element_cache_.entry<gui_button>("start_pause_button")().set_text("pause");
 		set_gui_read_only(true);
 	}
-	else { 
-		element_cache_.entry<gui_button>("start_pause_button")().set_text("start"); 
+	else {
+		element_cache_.entry<gui_button>("start_pause_button")().set_text("start");
 		set_gui_read_only(false);
+	}
+}
+
+void mandelbrot_gui::write_simulation_to_file(const viral_gui::gui_button_event & event)
+{
+	cv::VideoWriter output_writer;
+	output_writer.open("C:/Users/Josua/Desktop/mandelbrot.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G')/*-1*/,
+		30.0, cv::Size(1920,1080), true);
+	if (!output_writer.isOpened()) {
+		LOG_ERROR("could not open output writer!");
+		return;
+	}
+	parameters_.interpolation_method_ = &mandelbrot_generator::linear_xy;
+	float t = 0.f;
+	for (int i = 0; i < 240; i++) {
+		if (i % 1 == 0)LOG_INFO(string("processing frame no: ") + string(i));
+		t += 0.1f;
+		float f_t = t;
+		if (t < 12.f) f_t = pow(1.4, t);
+		else f_t = pow(1.4, 24.0 - t);
+		f_t -= 1.f;
+		/*parameters_.interpolation_ += 0.1f;
+		while (parameters_.interpolation_ >= 1.f) {
+			parameters_.iterations_++;
+			parameters_.interpolation_ -= 1.f;
+		}*/
+		parameters_.iterations_ = (int)f_t;
+		parameters_.interpolation_ = f_t - (float)parameters_.iterations_;
+		auto_pointer<image>viral_img = mandelbrot_generator::generate_mandelbrot_image_julia_value(parameters_);
+		viral_img->swap_rgba_bgra();
+		cv::Mat cv_img(viral_img->size().y, viral_img->size().x, CV_8UC4, viral_img->data());
+		//cv::Mat cv_img(1080, 1920, CV_8UC3);
+		output_writer.write(cv_img);
 	}
 }
 

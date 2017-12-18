@@ -1,4 +1,9 @@
-﻿  Generating code
+﻿          1 Datei(en) kopiert.
+          1 Datei(en) kopiert.
+  mandelbrot_gui.cpp
+..\..\..\source\mandelbrot\mandelbrot_gui.cpp(199): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+..\..\..\source\mandelbrot\mandelbrot_gui.cpp(200): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Generating code
   Finished generating code
   mandelbrot.vcxproj -> E:\Dokumente\Programmieren\mandelbrot\tools\visual_studio_2015\projects\..\..\..\build\x64_Release\mandelbrot.exe
   mandelbrot.vcxproj -> E:\Dokumente\Programmieren\mandelbrot\tools\visual_studio_2015\projects\..\..\..\build\x64_Release\mandelbrot.pdb (Full PDB)

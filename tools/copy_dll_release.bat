@@ -1,0 +1,2 @@
+copy E:\libs\opencv\build\x64\vc14\bin\opencv_world330.dll  ..\..\..\build\x64_Release\opencv_world330.dll"
+copy E:\libs\opencv\build\x64\vc14\bin\opencv_ffmpeg330_64.dll  ..\..\..\build\x64_Release\opencv_ffmpeg330_64.dll"

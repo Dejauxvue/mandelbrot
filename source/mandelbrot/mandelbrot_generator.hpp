@@ -35,8 +35,8 @@ public:
 	public:
 		viral_core::vector2i image_dimensions_;
 		float hsv_color_offset_ = 0.f;
-		float real_min_ = -2.f;
-		float imaginary_min_ = -1.2f;
+		float real_min_ = -2.001f;
+		float imaginary_min_ = -1.2001f;
 		float real_max_ = 1.f;
 		float imaginary_max_ = 1.2f;
 		float max_threshold_ = 20.f;
